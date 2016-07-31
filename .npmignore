@@ -9,3 +9,7 @@
 .node-version
 .npmignore
 npm-debug.log
+test/
+.idea/
+coffeelint.json
+src/

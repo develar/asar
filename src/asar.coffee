@@ -6,8 +6,8 @@ mkdirp = require 'mkdirp'
 
 Filesystem = require './filesystem'
 disk = require './disk'
-crawlFilesystem = require './crawlfs'
-createSnapshot = require './snapshot'
+#crawlFilesystem = require './crawlfs'
+#createSnapshot = require './snapshot'
 
 # Return whether or not a directory should be excluded from packing due to
 # "--unpack-dir" option
@@ -18,17 +18,17 @@ createSnapshot = require './snapshot'
 isUnpackDir = (path, pattern) ->
   path.indexOf(pattern) is 0 || minimatch path, pattern
 
-module.exports.createPackage = (src, dest, callback) ->
-  module.exports.createPackageWithOptions src, dest, {}, callback
+#module.exports.createPackage = (src, dest, callback) ->
+#  module.exports.createPackageWithOptions src, dest, {}, callback
 
-module.exports.createPackageWithOptions = (src, dest, options, callback) ->
-  {dot} = options
-  dot = true if dot is undefined
-
-  crawlFilesystem src, { dot: dot }, (error, filenames, metadata) ->
-    return callback(error) if error
-    module.exports.createPackageFromFiles src, dest, filenames, metadata, options, callback
-    return
+#module.exports.createPackageWithOptions = (src, dest, options, callback) ->
+#  {dot} = options
+#  dot = true if dot is undefined
+#
+#  crawlFilesystem src, { dot: dot }, (error, filenames, metadata) ->
+#    return callback(error) if error
+#    module.exports.createPackageFromFiles src, dest, filenames, metadata, options, callback
+#    return
 
 ###
 createPackageFromFiles - Create an asar-archive from a list of filenames
