@@ -9,7 +9,9 @@
 .node-version
 .npmignore
 npm-debug.log
-test/
-.idea/
+/test
+.gitattributes
+appveyor.yml
+.travis.yml
 coffeelint.json
-src/
+.idea/
