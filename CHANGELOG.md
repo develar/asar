@@ -1,5 +1,20 @@
 # Changes By Version
 
+## 0.13.0 - 2017-01-09
+
+### Changed
+
+- Dropped support for Node `0.10.0` and `0.12.0`. The minimum supported version
+  is now Node `4.6.0`. (#100)
+- This project was ported from CoffeeScript to JavaScript. The behavior and
+  APIs should be the same as previous releases. (#100)
+
+## 0.12.4 - 2016-12-28
+
+### Fixed
+
+- Unpack glob patterns containing `{}` characters not working properly (#99)
+
 ## 0.12.3 - 2016-08-29
 
 ### Fixed
