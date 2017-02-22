@@ -1,6 +1,6 @@
 fs = require 'fs'
 path = require 'path'
-tmp = require 'tmp'
+#tmp = require 'tmp'
 UINT64 = require('cuint').UINT64
 
 class Filesystem
@@ -53,21 +53,21 @@ class Filesystem
 
       callback()
 
-    tr = options.transform && options.transform(p)
-    if tr
-      tmp.file (err, path) ->
-        return handler() if err
-        out = fs.createWriteStream(path)
-        stream = fs.createReadStream p
-
-        stream.pipe(tr).pipe(out)
-        tr.on 'end', ->
-          file.transformed = {
-            path,
-            stat: fs.lstatSync path
-          }
-          handler()
-    else
+#    tr = options.transform && options.transform(p)
+#    if tr
+#      tmp.file (err, path) ->
+#        return handler() if err
+#        out = fs.createWriteStream(path)
+#        stream = fs.createReadStream p
+#
+#        stream.pipe(tr).pipe(out)
+#        tr.on 'end', ->
+#          file.transformed = {
+#            path,
+#            stat: fs.lstatSync path
+#          }
+#          handler()
+#    else
       process.nextTick(handler)
 
   insertLink: (p, stat) ->
