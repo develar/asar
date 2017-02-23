@@ -2,10 +2,7 @@
   "main": "./lib/asar.js",
   "name": "asar-electron-builder",
   "description": "Creating Electron app packages",
-  "version": "0.13.5",
-  "bin": {
-    "asar": "./bin/asar.js"
-  },
+  "version": "0.14.2",
   "engines": {
     "node": ">=4.6"
   },
@@ -29,7 +26,6 @@
   },
   "dependencies": {
     "chromium-pickle-js": "^0.2.0",
-    "commander": "^2.9.0",
     "cuint": "^0.2.2",
     "minimatch": "^3.0.3",
     "mkdirp": "^0.5.1"

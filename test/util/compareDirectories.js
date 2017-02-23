@@ -4,7 +4,7 @@ const path = require('path')
 
 const _ = require('lodash')
 
-const crawlFilesystem = require('../../lib/crawlfs')
+const crawlFilesystem = require('../crawlfs')
 
 module.exports = function (dirA, dirB, cb) {
   crawlFilesystem(dirA, function (err, pathsA, metadataA) {
